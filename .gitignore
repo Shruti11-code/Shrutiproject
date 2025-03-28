@@ -21,4 +21,4 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+*.sw?-e "node_modules\n.next\ndist\nbuild\nout" 
