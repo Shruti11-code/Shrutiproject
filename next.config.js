@@ -2,26 +2,18 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    unoptimized: true
+    unoptimized: true,
   },
-  // Add WebSocket configuration
-  webSocketServer: {
-    path: '/_next/webpack-hmr',
-  },
-  // Configure development server
   webpack: (config, { dev, isServer }) => {
     if (dev && !isServer) {
-      // Ensure proper WebSocket connection in development
-      const wsPath = '/_next/webpack-hmr';
-      config.devServer = {
-        ...config.devServer,
-        webSocketServer: {
-          path: wsPath,
-        },
+      // Optimize hot reloading in development
+      config.watchOptions = {
+        poll: 1000,
+        aggregateTimeout: 300,
       };
     }
     return config;
-  }
-}
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
