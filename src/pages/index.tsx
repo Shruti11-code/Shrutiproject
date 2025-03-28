@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Home() {
   const router = useRouter();
 
-  // User avatars data
+  
   const userAvatars = [
     { src: "/ellipse-1.png", alt: "User avatar" },
     { src: "/ellipse-2.png", alt: "User avatar" },
@@ -12,7 +12,7 @@ export default function Home() {
     { src: "/ellipse-4.png", alt: "User avatar" },
   ];
 
-  // Testimonial data
+  
   const testimonials = [
     {
       id: 1,
@@ -37,7 +37,7 @@ export default function Home() {
     },
   ];
 
-  // VR technology cards data
+ 
   const vrTechCards = [
     {
       id: 1,
