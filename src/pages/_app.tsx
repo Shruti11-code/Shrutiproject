@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    // Import Bootstrap JS on client-side
+    
     require('bootstrap/dist/js/bootstrap.bundle.min.js');
   }, []);
 
