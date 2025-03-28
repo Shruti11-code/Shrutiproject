@@ -11,7 +11,7 @@ export default function SignUp() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Add your signup logic here
+
     console.log('Sign up data:', formData);
     router.push('/');
   };
